@@ -65,7 +65,8 @@ Wait untill all Pods are created and configure additional microk8s plugins
 
 note due to [Issue 303](https://github.com/canonical/microk8s-core-addons/issues/303) you will need to pass the version argument to the GPU addon. 
 ```bash
-juju ssh -m mk8s microk8s/leader -- sudo microk8s enable ingress metallb:10.64.140.43-10.64.140.49
+juju ssh -m mk8s microk8s/leader -- sudo microk8s enable ingress
+juju ssh -m mk8s microk8s/leader -- sudo microk8s enable metallb:10.64.140.43-10.64.140.49
 juju ssh -m mk8s microk8s/leader -- sudo microk8s enable gpu --version 24.6.2
 
 juju expose microk8s
