@@ -152,7 +152,7 @@ juju consume aws-controller:admin/cos.grafana-dashboards cos-grafana -m mk8s
 juju consume aws-controller:admin/cos.loki-logging cos-loki -m mk8s
 juju consume aws-controller:admin/cos.prometheus-receive-remote-write cos-prometheus -m mk8s
 
-juju deploy grafana-agent grafana-agent-cos --channel latest/stable -m mk8s
+juju deploy grafana-agent grafana-agent-cos --channel latest/stable -m mk8s --base=ubuntu@22.04
 
 juju relate grafana-agent-cos:cos-agent microk8s:cos-agent -m mk8s
 juju relate grafana-agent-cos:cos-agent microk8s-gpu:cos-agent -m mk8s
