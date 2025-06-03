@@ -259,6 +259,7 @@ Check if KServe works by following the script `kserve-test.sh`. Update the authe
 
 Before deploying the NIM export the NGC API key.
 
+Note: Use the Legacy API Key.
 ```bash
 export NGC_API_KEY=...
 ```
