@@ -113,6 +113,7 @@ Next step is expose them to your computer via sshuttle. Use new terminal window 
 On the jumphost run:
 
 ```shell
+sudo snap install jq && sudo snap install yq
 MK8S_LEADER_IP=$(juju status -m mk8s microk8s/leader --format json | jq -r '.machines[] | .["dns-name"]')
 echo sshuttle -r ubuntu@$MK8S_LEADER_IP 10.0.0.0/8 172.31.0.0/16
 ```
