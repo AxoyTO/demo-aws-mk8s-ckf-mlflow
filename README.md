@@ -75,6 +75,7 @@ juju expose microk8s
 Save kubeconfig into the kube config default, if you do not use jumphost consider using different location.
 
 ```bash
+mkdir -p ~/.kube
 juju ssh -m mk8s microk8s/leader -- sudo microk8s config > ~/.kube/config
 ```
 
